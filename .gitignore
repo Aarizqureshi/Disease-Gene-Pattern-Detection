@@ -19,15 +19,22 @@ env/
 .ipynb_checkpoints/
 
 # ----------------------------
-# Data files (ignore large datasets)
+# Data files (large, not committed)
 # ----------------------------
-data/
-*.csv
-*.xlsx
-*.json
+data/raw/*.csv
+data/raw/*.txt
+data/raw/*.gz
+data/processed/*.csv
+data/processed/*.h5
+data/processed/*.pkl
+data/results/*.png
+data/results/*.pdf
+data/results/*.svg
 
-# (Optional) Keep sample data
-!data/sample.csv
+# Keep folder structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/results/.gitkeep
 
 # ----------------------------
 # Model files / outputs
@@ -59,6 +66,18 @@ Thumbs.db
 # ----------------------------
 *.tmp
 *.temp
+
+# ----------------------------
+# Node.js / React Frontend
+# ----------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+node_modules/
+dist/
 
 # ----------------------------
 # Allow empty folders
